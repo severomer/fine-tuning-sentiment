@@ -63,6 +63,9 @@ trainer.train()
 end = time.time()
 print(f"✅ CPU training time: {end - start:.2f} seconds")
 
+# Save the fine-tuned model for pipeline usage
+trainer.save_model("./results")
+
 # 7. Evaluate
 print("\nEvaluating fine-tuned model...")
 results = trainer.evaluate()
